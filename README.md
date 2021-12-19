@@ -1,6 +1,6 @@
-# Cypress Pointer Tests Project
+# Cypress Test Project
 
-Pointer Automation Tests  - API , E2E
+Automation Tests  - API , E2E
 
 ## Installation
 Install the dependencies and devDependencies to run the tests:
