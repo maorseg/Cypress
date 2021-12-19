@@ -1,16 +1,5 @@
 {
   "baseUrl": "https://api.openweathermap.org",
-  "reporterEnabled": "mochawesome , @reportportal/agent-js-cypress, mocha-junit-reporter",
-  "reporter": "@reportportal/agent-js-cypress",
-    "reporterOptions": {
-      "endpoint": "http://reportportal.xxx.local:8080/api/v1",
-      "token": "your_token",
-      "launch": "your launce name",
-      "project": "YOUR_PROJECT_NAME",
-      "description": "project description"
-    
-    }, 
-  
   "retries": {
     "runMode": 3,
     "openMode": 2
