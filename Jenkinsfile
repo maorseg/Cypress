@@ -20,12 +20,12 @@ pipeline {
                 echo 'Deploying'
             }
             
-            post {
-        always {
-        junit 'results/cypress-report.xml'
+           post {
+    success {
+        slackSend channel: "#cypress-maor-test", message: "Build Started: ${env.JOB_NAME} ${env.BUILD_NUMBER}"  
     }
-
-            
-        }
+}
+          
+     
     }
     }}
