@@ -3,8 +3,8 @@
   "reporterEnabled": "mochawesome , @reportportal/agent-js-cypress, mocha-junit-reporter",
   "reporter": "@reportportal/agent-js-cypress",
     "reporterOptions": {
-      "endpoint": "http://reportportal.cellebrite.local:8080/api/v1",
-      "token": "a94233da-743f-4c9c-b2bf-8124627cd6c7",
+      "endpoint": "http://reportportal.xxx.local:8080/api/v1",
+      "token": "xxx",
       "launch": "POINTER",
       "project": "POINTERRP_PERSONAL",
       "description": "Pointer test results in RP"
