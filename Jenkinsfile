@@ -22,10 +22,9 @@ pipeline {
             
            post {
     success {
-        slackSend channel: "#cypress-maor-test", message: "Build Started: ${env.JOB_NAME} ${env.BUILD_NUMBER}"  
+        slackSend channel: "#cypress-maor-test", message: "Build Started: ${env.JOB_NAME} ${env.BUILD_NUMBER}"
+        }
+      } 
     }
+  } 
 }
-          
-     
-    }
-    }}
