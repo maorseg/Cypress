@@ -4,10 +4,10 @@
   "reporter": "@reportportal/agent-js-cypress",
     "reporterOptions": {
       "endpoint": "http://reportportal.xxx.local:8080/api/v1",
-      "token": "xxx",
-      "launch": "POINTER",
-      "project": "POINTERRP_PERSONAL",
-      "description": "Pointer test results in RP"
+      "token": "your_token",
+      "launch": "your launce name",
+      "project": "YOUR_PROJECT_NAME",
+      "description": "project description"
     
     }, 
   
