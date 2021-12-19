@@ -1,15 +1,6 @@
 pipeline {
     agent any
 
-    parameters {
-    string(name: 'SPEC',defaultValue:"**/*{feature,test.js}",description:"Enter the script path to run")
-    choice(name: 'BROWSER',choices: ['chrome','edge','firefox'],description:"choice of the browser you want to run")
-
-    }
-    options{
-        ansiColor('xterm')
-    }
-
     stages {
         stage('Build') {
             steps {
