@@ -4,7 +4,7 @@
   "description": "Cypress Automation Framework",
   "main": "index.js",
   "scripts": {
-    "test": "NO_COLOR=1 cypress run -C cypress.json --browser=chrome --headless",
+    "test": "cypress run -C cypress.json --browser=chrome --headless",
     "debug": "cypress open -C cypress.json --browser=chrome"
   },
   "author": "Maor Segev",
