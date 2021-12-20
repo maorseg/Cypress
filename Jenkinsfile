@@ -37,7 +37,7 @@ pipeline {
             slackNoftify.call(env.BUILD_STATUS,SLACK_CHANNEL)
 
       }
-    }
+    }}
          }
       } 
     }
