@@ -1,11 +1,6 @@
 
 pipeline {
-     agent {
-        node {
-          
-        }
-    }
-    
+     agent any
      environment {
        SLACK_CHANNEL = "cypress-maor-test"
     }
