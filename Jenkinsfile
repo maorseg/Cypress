@@ -35,6 +35,7 @@ pipeline {
             sendEmails.call()
             slackNoftify.call(env.BUILD_STATUS,SLACK_CHANNEL)
             
-          }
-       } 
-    }
+            }
+         }
+      } 
+   }
