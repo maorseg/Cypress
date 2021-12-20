@@ -1,9 +1,6 @@
 
 pipeline {
      agent any
-     environment {
-       SLACK_CHANNEL = "cypress-maor-test"
-    }
     
     stages {
         stage('Build') {
@@ -24,14 +21,7 @@ pipeline {
                 echo 'Deploying'
             } 
             
-              post {
-    always {
-      script {
-            env.BUILD_STATUS = currentBuild.getCurrentResult()
-            sendEmails.call()
-            slackNoftify.call(env.BUILD_STATUS,SLACK_CHANNEL)
-
-      }
+            
     }}
          }
       } 
