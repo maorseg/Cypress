@@ -1,9 +1,7 @@
 
 pipeline {
     agent {
-        node {
-            label 'cypress-e2e-tests'
-        }
+        node 
     }
     
      environment {
