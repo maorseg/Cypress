@@ -1,7 +1,9 @@
 
 pipeline {
-    agent {
-        node 
+     agent {
+        node {
+          
+        }
     }
     
      environment {
