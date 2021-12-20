@@ -20,9 +20,6 @@ pipeline {
                 echo '######## Deploying ########'
                 echo 'Deploying'
             } 
-            
-            
-    }
          }
       } 
     }
