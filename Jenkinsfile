@@ -1,10 +1,8 @@
-
 pipeline {
-     agent any
-    
-    stages {
-  
-        stage('Install dependencies') { 
+     agent {
+       node 
+       stages {
+        stage('Install dependencies') {
             steps {
                 echo '######## Install dependencies ########'
                   bat "npm install"    // bat for windows and sh for linux
@@ -18,4 +16,4 @@ pipeline {
           }
         }
       } 
-  
+    }
