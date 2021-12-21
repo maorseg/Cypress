@@ -3,23 +3,18 @@ pipeline {
      agent any
     
     stages {
-        stage('Build') {
+        stage('Install dependencies') {
             steps {
-                echo '######## Building ########'
+                echo '######## Install dependencies ########'
+                  bat "npm install"    // bat for windows and sh for linux
             }
         }
-        stage('nimbus-web-viewer-client-e2e-testing') {
+        stage('client-e2e-testing') {
             steps {
-               echo '######## Testing ########'
-               bat "npm install"    // bat for windows and sh for linux
-               bat "npm run test"   // bat for windows and sh for linux
-            }
+               echo '######## Running cypress tests ########'
+                 bat "npm run test"   // bat for windows and sh for linux
+             
+          }
         }
-        stage('Deploy') {
-            steps {
-                echo '######## Deploying ########'
-                echo 'Deploying'
-            } 
-         }
       } 
     }
