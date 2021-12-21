@@ -14,6 +14,6 @@ pipeline {
                  bat "npm run test"   // bat for windows and sh for linux
              
           }
-        }
+        }}}
    
 
