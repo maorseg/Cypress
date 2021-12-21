@@ -2,6 +2,12 @@ pipeline {
      agent any
      
        stages {
+       
+        stage('build') {
+            steps {
+                bat 'node --version'
+            }    
+            
         stage('Install dependencies') {
             steps {
                 echo '######## Install dependencies ########'
