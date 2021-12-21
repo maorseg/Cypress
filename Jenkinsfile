@@ -10,7 +10,7 @@ pipeline {
                 }
                 
                 // CLONE PROJECT
-                   "git clone https://github.com/maorseg/cypress.git"
+                   "git clone https://github.com/maorseg/cypress"
             }
         }     
              
