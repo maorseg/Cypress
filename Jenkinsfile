@@ -3,9 +3,7 @@ pipeline {
      agent any
     
     stages {
-       
-             
-             
+  
         stage('--clone--') {
             steps {
                 script {
@@ -15,12 +13,9 @@ pipeline {
                 // REMOVE PREVIOUS FILE
                 bat "rm -rf ${projectFolder}"
                 // CLONE PROJECT
-                bat "git clone "
+                bat "git clone https://github.com/maorseg/cypress.git"
             }
-        }
-             
-             
-             
+        }     
              
         stage('Install dependencies') { 
             steps {
