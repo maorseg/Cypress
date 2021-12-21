@@ -6,12 +6,9 @@ pipeline {
   
         stage('--clone--') {
             steps {
-                script {
-                    FAILED_STAGE=env.STAGE_NAME
-                    echo "Cloning stage"
+                echo "Cloning stage"
                 }
-                // REMOVE PREVIOUS FILE
-                bat "rm -rf ${projectFolder}"
+                
                 // CLONE PROJECT
                 bat "git clone https://github.com/maorseg/cypress.git"
             }
