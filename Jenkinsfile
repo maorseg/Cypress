@@ -5,8 +5,9 @@ pipeline {
        
         stage('build') {
             steps {
-                bat 'node --version'
+                bat "node --version"
             }    
+        }
             
         stage('Install dependencies') {
             steps {
