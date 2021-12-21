@@ -4,16 +4,6 @@ pipeline {
     
     stages {
   
-        stage('--clone--') {
-            steps {
-                echo "Cloning stage"
-                }
-                
-                // CLONE PROJECT
-                   "git clone https://github.com/maorseg/cypress"
-            }
-        }     
-             
         stage('Install dependencies') { 
             steps {
                 echo '######## Install dependencies ########'
