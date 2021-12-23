@@ -1,24 +1,38 @@
-
 pipeline {
-  agent {
-    // this image provides everything needed to run Cypress
-    docker {
-      image 'cypress/base:10'
+	      agent {
+        docker {
+            image 'cypress/base:12.16.1' 
+            args '-p 3000:3000' 
+        }
     }
-  }
-
- stages:
-  - test
-
-test:
-  image: cypress/browsers:node12.14.1-chrome85-ff81
-  stage: test
-  script:
-    # install dependencies
-    - npm ci
-    # start the server in the background
-    - npm run start:ci &
-    # run Cypress tests
-    - npx cypress run --browser firefox
-  
-}}}
+	     
+	      options {
+	        ansiColor('xterm')
+	       }
+	     
+	       stages {
+	       
+	        stage('build') {
+	            steps {
+	                echo '######## Check versions ########'
+	                bat "node --version"
+	                bat "git version"
+	            }    
+	        }
+	            
+	        stage('Install dependencies') {
+	            steps {
+	                  echo '######## Install dependencies ########'
+	                  bat "npm install"    // bat for windows and sh for linux
+	            }
+	        }
+	            
+	        stage('client-e2e-testing') {
+	            steps {
+	                 echo '######## Running cypress tests ########'
+	                 bat "npm run test"   // bat for windows and sh for linux
+	             
+	          }
+	        }
+	       }
+	     }
