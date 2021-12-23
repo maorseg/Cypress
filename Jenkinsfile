@@ -8,7 +8,7 @@ pipeline {
     }
 
     stages {
-        stage('nimbus-evidance manager service') {
+        stage('GHFF') {
 
             steps {
                 echo 'yo from Jenkinsfile'
@@ -23,5 +23,5 @@ pipeline {
                   }
         }
     }
-}
+
 
