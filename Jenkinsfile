@@ -21,4 +21,4 @@ test:
     # run Cypress tests
     - npx cypress run --browser firefox
   
-}}]
+}}}
