@@ -24,5 +24,6 @@ I created few demo tests(UI + API + Visual Regression) under integration -> demo
 ## CI\CD Pipline
 
 - Install Jenkins
-- Configure in path to run Jekins file
+- Create new pipline project
+- Configure in path to run the project Jeknins file in project root folder
 - Run Build
