@@ -1,5 +1,5 @@
 pipeline {
-       agent any
+       agent node
 
      environment {
         SLACK_CHANNEL = "di-sharing"
