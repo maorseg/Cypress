@@ -1,14 +1,12 @@
 pipeline {
-    agent {
-        node
-    }}
+       agent any
 
      environment {
         SLACK_CHANNEL = "di-sharing"
     }
 
     stages {
-        stage('GHFF') {
+        stage('nimbus-evidance manager service') {
 
             steps {
                 echo 'yo from Jenkinsfile'
@@ -23,5 +21,4 @@ pipeline {
                   }
         }
     }
-
-
+}
