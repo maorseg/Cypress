@@ -1,30 +1,34 @@
 pipeline {
+	     agent any
+	     
+	      options {
+	        ansiColor('xterm')
+	       }
+	     
+	       stages {
+	       
+	        stage('build') {
+	            steps {
+	                echo '######## Check versions ########'
+	                bat "node --version"
+	                bat "git version"
+	            }    
+	        }
+	            
+	        stage('Install dependencies') {
+	            steps {
+	                  echo '######## Install dependencies ########'
+	                  bat "npm install"    // bat for windows and sh for linux
+	            }
+	        }
+	            
+	        stage('client-e2e-testing') {
+	            steps {
+	                 echo '######## Running cypress tests ########'
+	                 bat "npm run test"   // bat for windows and sh for linux
+	             
+	          }
+	        }
+	       }
+	     }
 
-  agent {
-    kubernetes {
-      label "nodeV14_16"
-      yaml agents.getAgent("nodeV14_16")
-    }
-  }
-
-     environment {
-        SLACK_CHANNEL = "di-sharing"
-    }
-
-    stages {
-        stage('FEF') {
-
-            steps {
-                echo 'yo from Jenkinsfile'
-                }
-        }
-
-    }
-    post {
-        success {
-            script {
-                echo " lovely "
-                  }
-        }
-    }
-}
