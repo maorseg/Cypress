@@ -1,33 +1,27 @@
 pipeline {
-     agent any
-     
-      options {
-        ansiColor('xterm')
-       }
-     
-       stages {
-       
-        stage('build') {
+    agent {
+        node
+    }}
+
+     environment {
+        SLACK_CHANNEL = "di-sharing"
+    }
+
+    stages {
+        stage('nimbus-evidance manager service') {
+
             steps {
-                echo '######## Check versions ########'
-                bat "node --version"
-                bat "git version"
-            }    
+                echo 'yo from Jenkinsfile'
+                }
         }
-            
-        stage('Install dependencies') {
-            steps {
-                  echo '######## Install dependencies ########'
-                  bat "npm install"    // bat for windows and sh for linux
-            }
+
+    }
+    post {
+        success {
+            script {
+                echo " lovely "
+                  }
         }
-            
-        stage('client-e2e-testing') {
-            steps {
-                 echo '######## Running cypress tests ########'
-                 bat "npm run test"   // bat for windows and sh for linux
-             
-          }
-        }
-       }
-     }
+    }
+}
+
