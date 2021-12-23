@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-        stage('nimbus-evidance manager service') {
+        stage('FEF') {
 
             steps {
                 echo 'yo from Jenkinsfile'
