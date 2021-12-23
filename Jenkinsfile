@@ -8,18 +8,18 @@ pipeline {
     stages {
         stage('Install Dependencies') { 
             steps {
-                sh 'npm ci'
-                sh 'npm run cy:verify'
+                bat 'npm ci'
+                bat 'npm run cy:verify'
             }
         }
         stage('Build') { 
             steps {
-                sh 'npm run build'
+                bat 'npm run build'
             }
         }
         stage('Test') { 
             steps {
-                sh 'npm run ci:cy-run'
+                bat 'npm run ci:cy-run'
             }
         }
     }
