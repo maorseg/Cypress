@@ -25,3 +25,4 @@ I created few demo tests(UI + API + Visual Regression) under integration -> demo
 
 - Install Jenkins
 - Configure in path to run Jekins file
+- Run Build
