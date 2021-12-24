@@ -35,7 +35,6 @@ pipeline {
 	                echo '######## Post actions here ########'
 			echo 'TODO Connect to slack'    
 	            }    
-	        }
-		       
+	        }       
+           }
       }
-}
