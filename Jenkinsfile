@@ -30,15 +30,18 @@ pipeline {
 	          }
 	        }
 		       
-stage('post') {
-    steps {        
-        script {
-             slackSend channel: '#ops-room',
-                  color: 'good',
-                  message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
-	}         }
+                stage('post') {
+                    steps {        
+                         script {
+          
+			  mail to: 'maors@cellebrite.com',
+             		  subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+         	          body: "Something is wrong with ${env.BUILD_URL}"
+	             }      
+		    
+	        }
 	
-}
+           }
 		       
-	       }
-	     }
+      }
+}
