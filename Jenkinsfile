@@ -1,8 +1,13 @@
 pipeline {
 	     agent any
 	
-	parameters {
-        choice(name: 'environment', choices: ['Test', 'Staging', 'Production'], description: 'Environment to deploy. Defaults to All - Sequential deployment with approval to production')
+	   stage('Convert branch name to url format'){
+            steps{
+                script{
+                    branchNameUrlFormat = URLEncoder.encode(env.BRANCH_NAME, "UTF-8")
+                    echo "Branch name (URL Format) is ${branchNameUrlFormat}"
+                }
+            }
         }
      
 	      options {
