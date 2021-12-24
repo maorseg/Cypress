@@ -30,12 +30,15 @@ pipeline {
 	              
 	          }
 	        }
+		       
+		       
 	post {
+		script{
     failure {
         mail to: 'maors@cellebrite.com',
              subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
              body: "Something is wrong with ${env.BUILD_URL}"
-    }
+    }}
 }
 		       
 	       }
