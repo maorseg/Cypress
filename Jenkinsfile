@@ -31,13 +31,14 @@ pipeline {
 	          }
 	        }
 		       
-		       
-	post {
-    success {
-        slackSend channel: '#ops-room',
+stage('post') {
+    steps {        
+        script {
+             slackSend channel: '#ops-room',
                   color: 'good',
                   message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
-    }
+        }         
+	
 }
 		       
 	       }
