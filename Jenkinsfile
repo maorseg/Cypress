@@ -37,7 +37,7 @@ stage('post') {
              slackSend channel: '#ops-room',
                   color: 'good',
                   message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
-        }         
+	}         }
 	
 }
 		       
