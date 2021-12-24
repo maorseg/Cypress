@@ -1,5 +1,9 @@
 pipeline {
 	     agent any
+	
+	      parameters {
+              choice(name: 'environment', choices: ['All', 'Development', 'Test', 'Staging', 'maor'], description: 'Environment to deploy. Defaults to All - Sequential deployment with approval to production')
+ 	      }
      
 	      options {
 	        ansiColor('xterm')
