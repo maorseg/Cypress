@@ -7,11 +7,12 @@ pipeline {
 	     
 	       stages {
 	       
-	        stage('build') {
+	        stage('Check versions') {
 	            steps {
 	                echo '######## Check versions ########'
-	                bat "node --version"
+			bat "node --version"
 	                bat "git version"
+			bat "cypress version"    
 	            }    
 	        }
 	            
@@ -29,5 +30,15 @@ pipeline {
 	              
 	          }
 	        }
+		       
+		post {
+                   always {
+			  script {
+			    if (currentBuild.currentResult == 'SUCCESS') {
+			      step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: "maors@cellebrite.com, sendToIndividuals: true])
+    }
+  }
+}       
+		       
 	       }
 	     }
