@@ -1,10 +1,6 @@
 pipeline {
 	     agent any
-	
-	       parameters {
-               choice(name: 'environment', choices: ['Test', 'Staging'], description: 'Environment to deploy')
-               }
-     
+	    
 	      options {
 	        ansiColor('xterm')
 	       }
