@@ -1,26 +1,33 @@
 pipeline {
-    agent {
-        docker {
-            image 'cypress/base:12.16.1' 
-            args '-p 3000:3000' 
-        }
-    }
-    stages {
-        stage('Install Dependencies') { 
-            steps {
-                bat 'npm ci'
-                bat 'npm run cy:verify'
-            }
-        }
-        stage('Build') { 
-            steps {
-                bat 'npm run build'
-            }
-        }
-        stage('Test') { 
-            steps {
-                bat 'npm run ci:cy-run'
-            }
-        }
-    }
-}
+	     agent any
+	     
+	      options {
+	        ansiColor('xterm')
+	       }
+	     
+	       stages {
+	       
+	        stage('build') {
+	            steps {
+	                echo '######## Check versions ########'
+	                bat "node --version"
+	                bat "git version"
+	            }    
+	        }
+	            
+	        stage('Install dependencies') {
+	            steps {
+	                  echo '######## Install dependencies ########'
+	                  bat "npm install"    // bat for windows and sh for linux
+	            }
+	        }
+	            
+	        stage('client-e2e-testing') {
+	            steps {
+	                 echo '######## Running cypress tests ########'
+	                 bat "npm run test"   // bat for windows and sh for linux
+	             
+	          }
+	        }
+	       }
+	     }
