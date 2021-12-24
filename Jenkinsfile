@@ -1,14 +1,5 @@
 pipeline {
 	     agent any
-	
-	   stage('Convert branch name to url format'){
-            steps{
-                script{
-                    branchNameUrlFormat = URLEncoder.encode(env.BRANCH_NAME, "UTF-8")
-                    echo "Branch name (URL Format) is ${branchNameUrlFormat}"
-                }
-            }
-        }
      
 	      options {
 	        ansiColor('xterm')
