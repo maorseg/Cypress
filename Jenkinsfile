@@ -20,7 +20,7 @@ pipeline {
 	                  echo '######## Install dependencies ########'
 	               //   bat "npm install"    // bat for windows and sh for linux
 			    script {  
-			    CrossPlatformCommand.execute(this, "npm install")
+			    CrossPlatformCommand.execute("npm install")
 			    }
 	            }
 	        }
