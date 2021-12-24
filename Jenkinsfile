@@ -18,8 +18,8 @@ pipeline {
 	        stage('Install dependencies') {
 	            steps {
 	                  echo '######## Install dependencies ########'
-	                  bat "npm install"    // bat for windows and sh for linux
-			    CrossPlatformCommand.execute(this, "cd cypress && npm install") 
+	               //   bat "npm install"    // bat for windows and sh for linux
+			    CrossPlatformCommand.execute(this, "npm install") 
 	            }
 	        }
 	            
