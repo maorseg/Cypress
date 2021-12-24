@@ -12,7 +12,6 @@ pipeline {
 	                echo '######## Check versions ########'
 			bat "node --version"
 	                bat "git version"
-			bat "cypress version"    
 	            }    
 	        }
 	            
