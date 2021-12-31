@@ -2,7 +2,7 @@ pipeline {
 	     agent any
 	
 	      parameters {
-		string(name:'SPEC',defaultValue:"cypress/integration/demo/01_myapi.test.js",description: "Enter the script SPEC file patch to exacute"
+		string(name:'SPEC',defaultValue:"cypress/integration/demo/01_myapi.test.js",description: "Enter the script SPEC file patch to exacute")
 	      }
 	    
 	      options {
