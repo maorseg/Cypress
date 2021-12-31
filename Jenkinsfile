@@ -1,24 +1,22 @@
 pipeline {
 	     agent any
 	
-	      parameters {
-		string(name:'SPEC',defaultValue:"cypress/integration/demo/",description: "Enter the script SPEC patch to exacute")
-	      }
-	    
-	      options {
+	        options {
 	        ansiColor('xterm')
 	       }
 	     
 	       stages {
 	       
 	        stage('Check versions') {
-	            script {
+	            steps {
+			script {
 	                echo '######## Check versions ########'
 			//bat "node --version"
 	                //bat "git version"
 			CrossPlatformCommand.execute(this, "node --version && git version")
         		}
 		      }
+		   }
 	            
 	        stage('Install dependencies') {
 	            steps {
