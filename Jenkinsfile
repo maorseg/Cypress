@@ -12,12 +12,13 @@ pipeline {
 	       stages {
 	       
 	        stage('Check versions') {
-	            steps {
+	            script {
 	                echo '######## Check versions ########'
-			bat "node --version"
-	                bat "git version"
-	            }    
-	        }
+			//bat "node --version"
+	                //bat "git version"
+			CrossPlatformCommand.execute(this, "node --version && git version")
+        		}
+		      }
 	            
 	        stage('Install dependencies') {
 	            steps {
