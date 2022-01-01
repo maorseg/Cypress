@@ -42,7 +42,7 @@ pipeline {
 	                 bat "npm run ci"   // run the relevant script in package json
 	              
 	          }
-	        }
+		}}
 
 	     post {
             always {
