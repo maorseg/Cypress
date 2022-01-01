@@ -46,7 +46,7 @@ pipeline {
 		       
 		       
 	
-	    stage('client-e2e-testing') {	       
+	    stage('kjuh') {	       
 		 post {
         always {
             //The script step takes a block of Scripted Pipeline and executes that in the Declarative Pipeline. 
