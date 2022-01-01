@@ -47,8 +47,8 @@ pipeline {
 		       
 	
 	    stage('kjuh') {	       
-		 post {
-        always {
+		  steps {
+       
             //The script step takes a block of Scripted Pipeline and executes that in the Declarative Pipeline. 
             //For most use-cases, the script step should be unnecessary in Declarative Pipelines, but it can provide
             //a useful "escape hatch." script blocks of non-trivial size and/or complexity should be moved into Shared Libraries instead.
