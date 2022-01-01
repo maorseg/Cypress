@@ -46,7 +46,7 @@ pipeline {
 		       
 		       
 	
-		       
+	    stage('client-e2e-testing') {	       
 		 post {
         always {
             //The script step takes a block of Scripted Pipeline and executes that in the Declarative Pipeline. 
@@ -63,7 +63,7 @@ pipeline {
             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
             deleteDir()
         }
-    }
+		 }}
 		       
 		       
 		       
