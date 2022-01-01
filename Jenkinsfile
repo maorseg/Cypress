@@ -3,13 +3,7 @@ pipeline {
 	
 	        options {
 	        ansiColor('xterm')
-	       }
-	
-	       parameters {
-               string(name: 'SPEC', defaultValue: 'cypress/integration/**/**', description: 'Eg: cypress/integration/example/*.spec.js')
-               choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: 'Pick the web browser you want to use to run your scripts')
-               }
-    
+	       }  
 	       stages {
 	       
 	        stage('Check versions') {
