@@ -14,14 +14,14 @@ Run the following from the terminal:
 ##### `npm install cypress --save-dev`
 ##### `cypress run -C cypress.json --browser=chrome --headless` - it will run tests in headless mode from Cypress CLI
 or
-##### `cypress open -C cypress.json` - it will run tests in non headless mode from Cypress test runner 
+##### `cypress open -C cypress.json` - it will run tests in interactives mode from Cypress test runner 
 
 I created few demo tests(UI + API + Visual Regression) under integration -> demo folder:
 - api.spec.js
 - applitools.spec.js
 - ui.spec.js 
 
-## CI\CD Pipline
+## For CI\CD Pipline
 
 - Install Jenkins
 - Create new pipline project
