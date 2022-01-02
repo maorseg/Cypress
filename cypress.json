@@ -11,7 +11,7 @@
     "mochaFile": "results/cypress-report.xml",
     "toConsole": true
   }
-}
+},
   
   "responseTimeOut": 60000,
   "requestTimeout": 60000,
