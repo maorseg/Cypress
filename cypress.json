@@ -4,6 +4,15 @@
     "runMode": 3,
     "openMode": 2
   },
+  
+  {
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "results/cypress-report.xml",
+    "toConsole": true
+  }
+}
+  
   "responseTimeOut": 60000,
   "requestTimeout": 60000,
   "testFiles": "**/*{feature,test.js}",
