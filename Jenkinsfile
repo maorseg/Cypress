@@ -3,7 +3,8 @@ pipeline {
 	
 	    	options {
 	        ansiColor('xterm')
-	       }  
+	       }
+	
 	       stages {
 	       
 	        stage('Check versions') {
@@ -28,7 +29,7 @@ pipeline {
 	                 bat "npm run ci"   // run the relevant script in package json
 	              
 	          }
-       		
+		}
 		
 		 post { 
         	   always { 
@@ -37,6 +38,6 @@ pipeline {
     		}
 	
 ///////////////////	
-	     }
+	     
 	  }
       }
