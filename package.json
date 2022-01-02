@@ -4,7 +4,7 @@
   "description": "Cypress Automation Framework",
   "main": "index.js",
   "scripts": {
-    "ci": "cypress run -C cypress.json --browser=chrome --headless --spec ${SPEC}",
+    "ci": "cypress run -C cypress.json",
     "test": "cypress run -C cypress.json --browser=chrome --headless",
     "debug": "cypress open -C cypress.json --browser=chrome"
   },
