@@ -1,11 +1,7 @@
 pipeline {
 	     agent any
 	
-	        parameters {
-                string(name: 'SPEC', defaultValue: 'cypress/integration/demo/01_api.test.js', description: 'Choose spec file to run')
-		}
-	
-	        options {
+	    	options {
 	        ansiColor('xterm')
 	       }  
 	       stages {
