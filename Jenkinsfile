@@ -14,9 +14,9 @@ pipeline {
 	       
 	        stage('Check versions') {
 	            steps {
-	                echo '######## Check versions ########'
-			bat "node --version"
-	                bat "git version"
+	                   echo '######## Check versions ########'
+			   bat "node --version"
+	                   bat "git version"
 
 		      }
 		   }
@@ -30,23 +30,17 @@ pipeline {
 	            
 	        stage('client-e2e-testing') {
 	            steps {
-	                 echo '######## Running cypress tests ########'
-	                 bat "npm run ci"   // run the relevant script in package json
-	              
+	                   echo '######## Running cypress tests ########'
+	                   bat "npm run ci"   // run the relevant script in package json             
 	          }
 		
-		
 		 post {
-       		 always {
-			 
+       		 always {		 
                  slackSend channel: '#maor-test',
                  color: COLOR_MAP[currentBuild.currentResult]            
     
-        }
-    }
-}
-	
-///////////////////	
-	     
-	  }
+    	    }
+  	  }
+	}     
       }
+    }
