@@ -9,7 +9,9 @@ pipeline {
 	        ansiColor('xterm')
 		timeout(time: 1, unit: 'HOURS')
 	       }
-	
+	 environment {
+    SLACK_CHANNEL = "di-sharing-git"
+  }
 	       stages {
 	       
 	        stage('Check versions') {
@@ -34,13 +36,14 @@ pipeline {
 	                   bat "npm run ci"   // run the relevant script in package json             
 	          }
 		
-		 post {
-       		 always {		 
-                 slackSend channel: '#maor-test',
-                 color: COLOR_MAP[currentBuild.currentResult]            
-    
-    	    }
-  	  }
-	}     
+		  post {
+    always {
+        script {
+        if ( env.BRANCH_NAME == 'master' ){
+            env.BUILD_STATUS = currentBuild.getCurrentResult()
+            slackNoftify.call(env.BUILD_STATUS,SLACK_CHANNEL)
+        }
       }
+    }
+  }
     }
