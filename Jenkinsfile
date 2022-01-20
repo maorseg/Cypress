@@ -10,7 +10,7 @@ pipeline {
 		timeout(time: 1, unit: 'HOURS')
 	       }
 	 environment {
-    SLACK_CHANNEL = "di-sharing-git"
+    SLACK_CHANNEL = "cypress-maor-test"
   }
 	       stages {
 	       
