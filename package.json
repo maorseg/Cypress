@@ -6,7 +6,8 @@
   "scripts": {
     "ci": "cypress run -C cypress.json",
     "test": "cypress run -C cypress.json --browser=chrome --headless",
-    "debug": "cypress open -C cypress.json --browser=chrome"
+    "debug": "cypress open -C cypress.json --browser=chrome",
+    "cy:report": "npm run cleanup && cypress run && npm run merge _reports && npm run mochawesome_report"
   },
   "author": "Maor Segev",
   "license": "ISC",
