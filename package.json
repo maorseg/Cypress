@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "ci": "cypress run -C cypress.json",
-    "test": "cypress run -C cypress.json --browser=chrome --headless",
-    "debug": "cypress open -C cypress.json --browser=chrome",
-    "cleanup": "rm -fr cypress/reports",
-    "cy:report": "npm run cleanup && cypress run && npm run merge _reports && npm run mochawesome_report"
+    "test": "cypress run -C cypress.json --browser=chrome --headless && npm run mochawesome_report",
+    "debug": "cypress open -C cypress.json --browser=chrome"
   },
   "author": "Maor Segev",
   "license": "ISC",
