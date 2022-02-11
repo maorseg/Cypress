@@ -36,14 +36,16 @@ pipeline {
 	                   bat "npm run ci"   // run the relevant script in package json             
 	          }
 		
-		  post {
-    always {
-        script {
-        if ( env.BRANCH_NAME == 'master' ){
-            env.BUILD_STATUS = currentBuild.getCurrentResult()
-            slackNoftify.call(env.BUILD_STATUS,SLACK_CHANNEL)
-        }
-      }
+                 post {
+   		 always {
+      			publishHTML (target : [
+			    allowMissing: true,
+			    alwaysLinkToLastBuild: false,
+			    keepAll: false,
+			    reportDir: 'packages\nimbus-web-viewer-client-e2e-testing\cypress\reports',
+			    reportFiles: 'mochawesome.html',
+			    reportName: 'HTML Report',
+			    reportTitles: 'HTML Report']) 
     }
-  }
-		}}}
+  }  
+}
