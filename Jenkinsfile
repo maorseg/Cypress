@@ -42,7 +42,7 @@ pipeline {
 			    allowMissing: true,
 			    alwaysLinkToLastBuild: false,
 			    keepAll: false,
-			    reportDir: 'packages\nimbus-web-viewer-client-e2e-testing\cypress\reports',
+			    reportDir: 'packages\\nimbus-web-viewer-client-e2e-testing\\cypress\\reports',
 			    reportFiles: 'mochawesome.html',
 			    reportName: 'HTML Report',
 			    reportTitles: 'HTML Report']) 
