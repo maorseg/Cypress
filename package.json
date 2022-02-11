@@ -4,10 +4,10 @@
   "description": "Cypress Automation Framework",
   "main": "index.js",
   "scripts": {
-    "ci": "cypress run -C cypress.json && npm run mochawesome_report",
+    "ci": "cypress run -C cypress.json",
     "test": "cypress run -C cypress.json --browser=chrome --headless && npm run mochawesome_report",
     "debug": "cypress open -C cypress.json --browser=chrome",
-    "merge-all-reports": "npx mochawesome-merge 'cypress/reports/*.json' > mochawesome.json",
+    "merge-all-reports": "npx mochawesome-merge 'cypress/*.json' > mochawesome.json",
     "merge-html": "npx marge mochawesome.json"
   },
   "author": "Maor Segev",
