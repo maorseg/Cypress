@@ -1,12 +1,12 @@
 {
- "reporter": "mochawesome",
+  "reporter": "mochawesome",
   "reporterOptions": {
-    "reportDir": "cypress/results",
     "overwrite": false,
     "html": false,
     "json": true
-},
+  },
   "baseUrl": "https://api.openweathermap.org",
+  "experimentalSessionSupport": true,
   "retries": {
     "runMode": 3,
     "openMode": 2
@@ -15,6 +15,7 @@
   "responseTimeOut": 60000,
   "requestTimeout": 60000,
   "testFiles": "**/*{feature,test.js}",
+  "supportFile": "./cypress/support/index.js",
   "ignoreTestFiles":"**/playground/*",
   "trashAssetsBeforeRuns": true,
   "viewportHeight": 768,
