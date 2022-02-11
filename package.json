@@ -6,7 +6,9 @@
   "scripts": {
     "ci": "cypress run -C cypress.json && npm run mochawesome_report",
     "test": "cypress run -C cypress.json --browser=chrome --headless && npm run mochawesome_report",
-    "debug": "cypress open -C cypress.json --browser=chrome"
+    "debug": "cypress open -C cypress.json --browser=chrome",
+    "merge-all-reports": "npx mochawesome-merge 'cypress/reports/*.json' > mochawesome.json",
+    "merge-html": "npx marge mochawesome.json"
   },
   "author": "Maor Segev",
   "license": "ISC",
