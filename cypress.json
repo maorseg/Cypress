@@ -1,11 +1,10 @@
 {
-    "reporter": "mochawesome",
+ "reporter": "mochawesome",
   "reporterOptions": {
     "reportDir": "cypress/results",
     "overwrite": false,
     "html": false,
     "json": true
-  }
 },
   "baseUrl": "https://api.openweathermap.org",
   "retries": {
