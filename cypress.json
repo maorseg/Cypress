@@ -1,10 +1,4 @@
 {
-  "reporter": "mochawesome",
-  "reporterOptions": {
-    "overwrite": false,
-    "html": true,
-    "json": true
-  },
 
   "baseUrl": "https://api.openweathermap.org",
   "retries": {
