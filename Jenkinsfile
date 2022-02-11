@@ -46,6 +46,7 @@ pipeline {
 			    reportFiles: 'mochawesome.html',
 			    reportName: 'HTML Report',
 			    reportTitles: 'HTML Report']) 
-    }
+   }
   }  
+ }
 }
