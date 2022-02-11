@@ -5,7 +5,7 @@
     "overwrite": false,
     "html": false,
     "json": true
-  }
+  },
   "baseUrl": "https://api.openweathermap.org",
   "retries": {
     "runMode": 3,
