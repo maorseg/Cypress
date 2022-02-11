@@ -33,8 +33,7 @@ pipeline {
 	        stage('client-e2e-testing') {
 	            steps {
 	                   echo '######## Running cypress tests ########'
-	                   bat "npm run ci"   // run the relevant script in package json    
-			   bat "npm run merge-all-reports"   // run the relevant script in package json 
+	                   bat "npm run ci"   // run the relevant script in package json
 			   bat "npm run merge-html"   // run the relevant script in package json 
 	          }
 		
